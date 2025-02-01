@@ -6,4 +6,4 @@ a- Emirhan  yapıldı
 b-        yapılmadı
 c- Talha  
 d- Şevval yapılmadı
-e-        yapılmadı  
+e- Neva yapıldı
