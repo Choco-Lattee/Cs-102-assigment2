@@ -4,6 +4,6 @@ Herkes yapmak istediği bölümün yanıan ismini yazabilir mi
 sonra yapıldı yapılmadı olarak işaretleyebilirsiniz
 a- Emirhan  yapıldı
 b-        yapılmadı
-c- Talha  yapılmadı
+c- Talha  
 d- Şevval yapılmadı
 e-        yapılmadı  
