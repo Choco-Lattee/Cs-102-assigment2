@@ -1,4 +1,4 @@
-public class assign2 
+public class assign2Main 
 {
     public static void main(String[] args) 
     {   
