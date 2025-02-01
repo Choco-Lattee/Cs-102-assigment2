@@ -38,5 +38,10 @@ public class assign2Main
         }
         System.out.println(Arrays.toString(givenArray));
         System.out.println(Arrays.toString(DiffAverage(givenArray)));
-    }    
+        int maximumElementElement = getMaximumOfTheArray(givenArray);
+        int minimumElement = getMinimumOfTheArray(givenArray);
+        System.out.println("Maximum element of the array is " + maximumElementElement);
+        System.out.println("Minimum element of the array is " + minimumElementElement);
 }
+    }    
+
