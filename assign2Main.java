@@ -63,29 +63,46 @@ public class assign2Main {
     }
 
     public static void main(String[] args) {
-        //an array contains random integers in the range [0,100].
+        Scanner sc = new Scanner(System.in);
         int[] givenArray = new int[ARRAY_SIZE];
         for (int i = 0; i < ARRAY_SIZE; i++) {
             givenArray[i] = (int) (Math.random() * 100);
         }
         System.out.println(Arrays.toString(givenArray));
-        System.out.println(Arrays.toString(DiffAverage(givenArray)));
-        int maximumElementElement = getMaximumOfTheArray(givenArray);
-        int minimumElement = getMinimumOfTheArray(givenArray);
-        System.out.println("Maximum element of the array is " + maximumElementElement);
-        System.out.println("Minimum element of the array is " + minimumElementElement);
 
-        //test sumEvenIndex
-        int evenSum = sumEvenIndex(givenArray);
-        System.out.println("\nSum of elements at even indices: " + evenSum);
+        int choice;
+        do{
+            System.out.print("Array Tools Menu:\r\n" +
+                            "1. Find the average of the array.\n" + 
+                            "2. Find the array's minimum and maximum.\n" +
+                            "3. Find the sum of elements with odd- and even-numbered indexes.\n" +
+                            "4. Exit\n" + 
+                            "Enter your choice: ");
 
-        //test sumOddIndex
-        int oddSum = sumOddIndex(givenArray);
-        System.out.println("Sum of elements at odd indices: " + oddSum);
+            choice = sc.nextInt();
 
-        //test sumOddAndEvenIndexes
-        int[] sums = sumOddAndEvenIndexes(givenArray);
-        System.out.println("\nSum of elements at even indices: " + sums[0]);
-        System.out.println("Sum of elements at odd indices: " + sums[1]);
+            switch (choice) {
+                case 1:
+                    System.out.println(Arrays.toString(DiffAverage(givenArray)));
+                    break;
+                case 2:
+                    int maximumElementElement = getMaximumOfTheArray(givenArray);
+                    int minimumElement = getMinimumOfTheArray(givenArray);
+                    System.out.println("Maximum element of the array is " + maximumElementElement);
+                    System.out.println("Minimum element of the array is " + minimumElement);
+                    break;
+                case 3:
+                    int evenSum = sumEvenIndex(givenArray);
+                    System.out.println("\nSum of elements at even indices: " + evenSum);
+            
+                    int oddSum = sumOddIndex(givenArray);
+                    System.out.println("Sum of elements at odd indices: " + oddSum);
+            
+                    int[] sums = sumOddAndEvenIndexes(givenArray);
+                    System.out.println("\nSum of elements at even indices: " + sums[0]);
+                    System.out.println("Sum of elements at odd indices: " + sums[1]);
+                    break;
+            }
+        }while(choice !=4);
     }
 }
