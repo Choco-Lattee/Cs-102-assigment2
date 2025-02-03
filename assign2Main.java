@@ -5,6 +5,28 @@ public class assign2Main {
 
     public static final int ARRAY_SIZE = 100;
 
+    public static int[] getDifferenceFromAverage(int[] arr){
+        int average = getAverage(arr);
+        int length = arr.length;
+        int[] ret = new int[length];
+
+        for(int i = 0; i < length; i++)
+            ret[i] = Math.abs(average - arr[i]);
+
+        return ret;
+    }
+
+    public static int getAverage(int[] arr){
+        int sum = 0;
+        int length = arr.length;
+    
+        for(int num : arr){
+            sum = sum + num;
+        }
+    
+        return sum / length;
+    }
+
     public static int getMinimumOfTheArray(int[] givenArray) {
         int minimumElement = 100; // no one of the elements can be greater than 100.
         int currentElement;
@@ -75,7 +97,7 @@ public class assign2Main {
         int choice;
         do{
             System.out.print("Array Tools Menu:\r\n" +
-                            "1. Find the average of the array.\n" + 
+                            "1. Find the difference from the average of the array.\n" + 
                             "2. Find the array's minimum and maximum.\n" +
                             "3. Find the sum of elements with odd- and even-numbered indexes.\n" +
                             "4. Exit\n" + 
@@ -85,7 +107,8 @@ public class assign2Main {
 
             switch (choice) {
                 case 1:
-                    System.out.println(Arrays.toString(DiffAverage(givenArray)));
+                    System.out.println("The average of elements is: "+ getAverage(givenArray));
+                    System.out.println("The difference from average is: "+ Arrays.toString(getDifferenceFromAverage(givenArray)));
                     break;
                 case 2:
                     int maximumElementElement = getMaximumOfTheArray(givenArray);
